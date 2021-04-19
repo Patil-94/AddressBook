@@ -13,7 +13,7 @@ namespace AddressBook
         static void Main(string[] args)
         {
             Console.WriteLine("-------------Welcome to Address Book Program------------ ");
-            AddressBook addressBook = new AddressBook();
+            AddressBook addressBook = new AddressBook(); //object of AddessBook class
             Console.WriteLine("Enter First Name :");
             string firstName = Console.ReadLine();
             Console.WriteLine("Enter Last Name :");
@@ -27,11 +27,13 @@ namespace AddressBook
             Console.WriteLine("Enter Email :");
             string email = Console.ReadLine();
             Console.WriteLine("Enter Zip :");
-            int zip = Convert.ToInt32(Console.ReadLine());
+            int zip = Convert.ToInt32(Console.ReadLine());//conver into int using ToInt32()
             Console.WriteLine("Enter Phone Number :");
             long phoneNumber = Convert.ToInt64(Console.ReadLine());
             addressBook.AddContact(firstName, lastName, address, city, state, email, zip, phoneNumber);
-            addressBook.ViewContact();
+            addressBook.ViewContact();//calling method
+            addressBook.EditContact(firstName);
+            addressBook.ViewContact();//calling method
             Console.Read();
         }
         
