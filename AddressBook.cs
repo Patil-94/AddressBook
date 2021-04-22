@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace AddressBook
 {
+
     class AddressBook : IPerson
     {
         private Dictionary<string, Person> addressBook = new Dictionary<string, Person>(); //create addressBook Dictionary and string is (Key)(string=datatype) and person is (value)
@@ -19,7 +20,7 @@ namespace AddressBook
             contact.Address = address;
             contact.City = city;
             contact.State = state;
-            contact    .Email = email;
+            contact.Email = email;
             int Zip = zip;
             contact.PhoneNumber = phoneNumber;
             addressBook.Add(contact.FirstName, contact);
@@ -39,6 +40,9 @@ namespace AddressBook
                 Console.WriteLine("Phone Number : " + item.Value.PhoneNumber + "\n");
 
             }
+           
+            
+            
         }
         public void EditContact(string name) //method in inteface pass argument name
         {
@@ -48,7 +52,7 @@ namespace AddressBook
                 {
 
                     Console.WriteLine("Choose What to Edit \n 1. FirstName\n2. LastName\n3. Address\n4. city\n5. State\n6. Email\n7. Zip \n8. PhoneNumber\n");
-                            
+
                     int choice = Convert.ToInt32(Console.ReadLine()); //convert string and store choice
                     switch (choice)
                     {
@@ -74,7 +78,7 @@ namespace AddressBook
                             break;
                         case 6:
                             Console.WriteLine("Enter Email :");
-                            item.Value.Email  = Console.ReadLine();
+                            item.Value.Email = Console.ReadLine();
                             break;
                         case 7:
                             Console.WriteLine("Enter Zip :");
@@ -87,6 +91,29 @@ namespace AddressBook
                     }
                 }
             }
+
         }
+
+        public void DeleteContact(string name)
+        {
+            if (addressBook.ContainsKey(name))
+            {
+                addressBook.Remove(name);
+                Console.WriteLine("\nDeleted Succesfully.\n");
+            }
+            else
+            {
+                Console.WriteLine("\nIt Is Not Found.\n");
+            }
+        }
+
+
+
     }
 }
+    
+
+
+
+
+
