@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace AddressBook
 {/// <summary>
-/// signature of interface
-/// </summary>
-     interface IPerson
-     {
-        void addPerson();
-       void displayPerson();
+ /// signature of interface
+ /// </summary>
+  public interface IPerson
+    {
+       // void addPerson();
+        void displayPerson();
         void editPerson();
-       void deletePerson();
+        void deletePerson();
     }
 }

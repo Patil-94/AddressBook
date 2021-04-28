@@ -8,13 +8,14 @@ namespace AddressBook
 {
    public  class Person
    {
-		
+		//instance variable
 		public string FirstName;
 		public string LastName;
 		public string city;
 		public string state;
 		public string email;
 		public string phoneNumber;
+
 		//parameterized constructor for initializing instance member
 		public Person(string firstName, string lastName, string city, string state, string email, string phoneNumber)//Parameterized Constructor
 		{
@@ -45,12 +46,12 @@ namespace AddressBook
 			this.LastName = lastName;
 		}
 
-		public String getCity()
+		public String getCity()//get method returns the value of the variable city.
 		{
 			return city;
 		}
 
-		public void setCity(String city)
+		public void setCity(String city)//get method returns the value of the variable city.
 		{
 			this.city = city;
 		}
