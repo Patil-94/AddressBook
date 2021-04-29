@@ -6,18 +6,15 @@ using System.Threading.Tasks;
 
 namespace AddressBook
 {
-   public  class Person
-   {
-		//instance variable
+	public class Person
+	{
 		public string FirstName;
 		public string LastName;
 		public string city;
 		public string state;
 		public string email;
-		public string phoneNumber;
-
-		//parameterized constructor for initializing instance member
-		public Person(string firstName, string lastName, string city, string state, string email, string phoneNumber)//Parameterized Constructor
+		public long phoneNumber;
+		public Person(string firstName, string lastName, string city, string state, string email, long phoneNumber)
 		{
 			this.FirstName = firstName;
 			this.LastName = lastName;
@@ -26,32 +23,32 @@ namespace AddressBook
 			this.email = email;
 			this.phoneNumber = phoneNumber;
 		}
-		public String getFirstName() /// get method returns the value of the variable FirstName.
+		public String getFirstName()
 		{
 			return FirstName;
 		}
 
-		public void setFirstName(String firstName)  // set method assigns a value to the name variable.
+		public void setFirstName(String firstName)
 		{
 			this.FirstName = firstName;
 		}
 
-		public String getLastName() //get method returns the value of the variable LastName.
+		public String getLastName()
 		{
 			return LastName;
 		}
 
-		public void setLastName(String lastName) //set method assigns a value to the name variable.
+		public void setLastName(String lastName)
 		{
 			this.LastName = lastName;
 		}
 
-		public String getCity()//get method returns the value of the variable city.
+		public String getCity()
 		{
 			return city;
 		}
 
-		public void setCity(String city)//get method returns the value of the variable city.
+		public void setCity(String city)
 		{
 			this.city = city;
 		}
@@ -65,12 +62,12 @@ namespace AddressBook
 		{
 			this.state = state;
 		}
-		public String getPhoneNumber()
+		public long getPhoneNumber()
 		{
 			return phoneNumber;
 		}
 
-		public void setPhoneNumber(String phoneNumber)
+		public void setPhoneNumber(long phoneNumber)
 		{
 			this.phoneNumber = phoneNumber;
 		}
@@ -86,4 +83,3 @@ namespace AddressBook
 		}
 	}
 }
-

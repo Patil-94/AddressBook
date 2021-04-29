@@ -12,7 +12,8 @@ namespace AddressBook
         /// Entry ponit
         /// </summary>
         /// <param name="args"></param>
-       public  static void Main(string[] args)
+        AddressBook obj = new AddressBook();
+        public static void Main(string[] args)
         {
             Console.WriteLine("Welcome in Address book System");
 
@@ -23,7 +24,7 @@ namespace AddressBook
 
             Console.WriteLine("\nHow many address Book you want to create : ");
             int numAddressBooks = Convert.ToInt32(Console.ReadLine()); //store and convert into int using numAdressBooks variable.
-                                                                       
+
             for (int i = 1; i <= numAddressBooks; i++)
             {
                 Console.WriteLine("Enter the name of address book " + i + ": ");
@@ -34,7 +35,7 @@ namespace AddressBook
             Console.WriteLine("\nYou have created following Address Books : ");
             foreach (var item in Dict) //var is used and it is store any data type value.
             {
-                Console.WriteLine("{0}",item .Key  );
+                Console.WriteLine("{0}", item.Key);
             }
             while (ProgramIsRunning)
             {
@@ -113,12 +114,12 @@ namespace AddressBook
                 Console.WriteLine("Enter State : ");
                 string state = Console.ReadLine();
                 Console.WriteLine("Enter Phone Number : ");
-                string  phoneNumber = Console.ReadLine();
+                string phoneNumber = Console.ReadLine();
                 Console.WriteLine("Enter Email id :");
                 string email = Console.ReadLine();
                 addressBook.AddContact(firstName, lastName, address, city, state, phoneNumber, email);
             }
 
-       }
+        }
     }
 }
